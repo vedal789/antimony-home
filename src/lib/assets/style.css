@@ -1,0 +1,30 @@
+/* mmmmm i love css yayyyyyy */
+
+.thingy {
+    background-color: rgb(13, 10, 85);
+    font-family: monospace;
+    padding: 20px;
+    text-align: center;
+}
+
+body {
+    background-color: rgb(9, 6, 61);
+    zoom: 1.6; 
+    scroll-behavior: smooth;
+    color: white;
+}
+
+/* we dont have a navbar yet but i wanted to create the css for it now :3
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+*/
+
+small {
+    opacity: 0.5;
+    font-size: 0.8em;
+}
