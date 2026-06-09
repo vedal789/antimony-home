@@ -1,4 +1,7 @@
 <script>
+    // thanks penguinmod for the button code <3
+    // https://github.com/PenguinMod/PenguinMod-Home/blob/main/src/lib/Button/Button.svelte
+    
     import { createEventDispatcher } from "svelte";
 
     const {

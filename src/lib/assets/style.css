@@ -37,3 +37,37 @@ small {
     opacity: 0.5;
     font-size: 0.8em;
 }
+
+/*
+Source - https://stackoverflow.com/a/66565163
+Posted by Aleks G
+Retrieved 2026-06-09, License - CC BY-SA 4.0
+*/
+
+.flex-wrapper {
+  display: flex;
+  min-height: 51vh;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.footer {
+  margin-top: auto;
+  justify-content: center;
+  text-align: center;
+  opacity: 0.6;
+}
+
+.footer2 {
+    font-size: 0.7em;
+    opacity: 0.5;
+    
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    text-align: left;
+}
+
+.footer-column {
+    min-width: 120px;
+}
