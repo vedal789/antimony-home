@@ -5,13 +5,22 @@
     font-family: monospace;
     padding: 20px;
     text-align: center;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+
+.center-wrapper-thingy {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 1rem;
+    }
 
 body {
     background-color: rgb(9, 6, 61);
     zoom: 1.6; 
     scroll-behavior: smooth;
     color: white;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 /* we dont have a navbar yet but i wanted to create the css for it now :3
