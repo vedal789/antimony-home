@@ -8,9 +8,7 @@
 <body>
     <h1>Credits</h1>
     <p>Antimony is made possible by the work of many volunteers. We want to thank everyone who has contributed to the project.</p>
-    <ul>
         <li>Placeholder Name</li>
         <li>Placeholder Name</li>
         <li>Placeholder Name</li>
-    </ul>
 </body>
