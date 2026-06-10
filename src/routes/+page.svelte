@@ -6,7 +6,6 @@
 <Navbar />
 
     <body>
-    <div class="flex-wrapper">
         <div class="thingy">
             <h1>Antimony</h1>
             <p>Antimony is a a block-based video editing tool, built for newbies and power users.</p>
@@ -29,7 +28,7 @@
             <h4>Website</h4>
             <a href="https://antimony-editor.github.io/editor/" style="color: white;"><p>Editor</p></a> 
             <a href="credits" style="color: white;"><p>Credits</p></a>
-            <a href="https://github.com/antimony-editor" style="color: white;"><p>Source</p></a>
+            <a href="https://github.com/antimony-editor" style="color: white;"><p>GitHub</p></a>
         </div>
 
         <div class="footer-column">
