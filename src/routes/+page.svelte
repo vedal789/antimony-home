@@ -94,7 +94,6 @@
         <div class="panel cta-panel">
             <div class="panel-body cta-body">
                 <h2>Try making something cool!</h2>
-				<br>
                 <p>Antimony is <b>still in development</b> and may be prone to bugs.</p>
                 <Button highlighted={true} link={LINK.editor} label="Open the editor" />
             </div>
