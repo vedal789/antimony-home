@@ -1,45 +1,274 @@
-/* mmmmm i love css yayyyyyy */
+:root {
+  --bg-app: #08080a;
+  --bg-primary: #111113;
+  --bg-secondary: #1c1c20;
+  --bg-tertiary: #28282e;
+  --bg-surface: #38383f;
 
-.thingy {
-    background-color: rgb(13, 10, 85);
-    font-family: monospace;
-    padding: 20px;
-    text-align: center;
-    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --border-subtle: #1c1c20;
+  --border-default: #2e2e35;
+  --border-strong: #46464f;
+
+  --accent: #3e7ef5;
+  --accent-hover: #6f9dff;
+  --accent-dim: rgba(62, 126, 245, 0.12);
+  --accent-glow: rgba(62, 126, 245, 0.25);
+
+  --text-primary: #f0f0f2;
+  --text-secondary: #8888a0;
+  --text-muted: #606068;
+  --text-dim: #3a3a42;
+
+  --danger: #e03e3e;
+  --success: #22c55e;
+  --warning: #e8940a;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 24px;
+  --space-2xl: 40px;
+  --space-3xl: 64px;
+
+  --radius-sm: 3px;
+  --radius-md: 5px;
+  --radius-lg: 8px;
+
+  --font-ui: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --shadow-panel: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-float: 0 12px 32px rgba(0, 0, 0, 0.6);
+
+  --content-w: 880px;
 }
 
-.center-wrapper-thingy {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        margin-top: 1rem;
-    }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-    background-color: rgb(9, 6, 61);
-    zoom: 1.6; 
-    scroll-behavior: smooth;
-    color: white;
-    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
+  background: var(--bg-app);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* we dont have a navbar yet but i wanted to create the css for it now :3
-.navbar {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 10px;
-    border-radius: 10px;
+::selection {
+  background: var(--accent-dim);
+  color: var(--text-primary);
 }
-*/
 
-small {
-    opacity: 0.5;
-    font-size: 0.8em;
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-surface);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-ui);
+  color: var(--text-primary);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin: 0 0 var(--space-md);
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+p {
+  margin: 0 0 var(--space-md);
+  color: var(--text-secondary);
 }
 
 a {
-    color: #86C5DB;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.12s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+small {
+  color: var(--text-muted);
+  font-size: 0.8em;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border-default);
+  margin: var(--space-xl) 0;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: var(--content-w);
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--space-xl);
+  flex: 1;
+}
+
+.center-wrapper-thingy {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.panel {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: var(--space-sm) var(--space-md);
+  color: var(--text-secondary);
+}
+
+.panel-body {
+  padding: var(--space-lg);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.1rem;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-default);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn:hover {
+  background: var(--bg-surface);
+  border-color: var(--border-strong);
+}
+
+.btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.footer {
+  border-top: 1px solid var(--border-default);
+  background: var(--bg-secondary);
+}
+
+.footer-inner {
+  width: 100%;
+  max-width: var(--content-w);
+  margin: 0 auto;
+  padding: var(--space-xl);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-xl);
+}
+
+.footer-column {
+  min-width: 140px;
+}
+
+.footer-column .eyebrow {
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.footer-column a {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 13px;
+  padding: 2px 0;
+}
+
+.footer-column a:hover {
+  color: var(--text-primary);
+}
+
+.footer-base {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+  padding: var(--space-md) var(--space-xl) var(--space-xl);
 }
 
 .flex-wrapper {
@@ -49,28 +278,16 @@ a {
   justify-content: flex-start;
 }
 
-.footer {
-  justify-content: center;
-  text-align: center;
-  opacity: 0.6;
-}
-
 .footer2 {
-    font-size: 0.7em;
-    opacity: 0.5;
-    
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    text-align: left;
-}
-
-.footer-column {
-    min-width: 120px;
+  font-size: 0.85em;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2xl);
+  text-align: left;
 }
 
 hr.rounded {
-  border-top: 4px solid #bbb;
-  border-radius: 2px;
-  opacity: 0.5;
+  border-top: 1px solid var(--border-default);
+  opacity: 1;
 }
