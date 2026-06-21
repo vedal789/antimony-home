@@ -81,7 +81,7 @@
                 <div class="panel-body">
                     <h3>Built 100% in the open</h3>
                     <p>
-                        Antimony is built by volunteers on GitHub instead of behind closed doors.
+                        Antimony is built by volunteers on GitHub instead of remaining solely behind closed doors.
                         That keeps the project honest about what it can and can't do yet, and allows people
 						to freely contribute to it!
                     </p>
