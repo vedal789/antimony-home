@@ -1,10 +1,10 @@
 <script>
-    import Navbar from '$lib/navbar.svelte';
-    import Button from '$lib/button.svelte';
-    import LINK from '../resources/urls.js';
+    import Navbar from "$lib/navbar.svelte";
+    import Button from "$lib/button.svelte";
+    import LINK from "../resources/urls.js";
 
-    const WORDMARK_COLORS = ['#fdc700', '#ff6467', '#51a2ff'];
-    const wordmark = 'ANTIMONY'.split('').map((char, i) => ({
+    const WORDMARK_COLORS = ["#fdc700", "#ff6467", "#51a2ff"];
+    const wordmark = "ANTIMONY".split("").map((char, i) => ({
         char,
         color: WORDMARK_COLORS[i % WORDMARK_COLORS.length],
         inDelay: i * 0.05,
@@ -22,16 +22,22 @@
                 {#each wordmark as letter}
                     <span
                         style="--letter-color: {letter.color}; --in-delay: {letter.inDelay}s; --float-delay: {letter.floatDelay}s;"
-                    >{letter.char}</span>
+                        >{letter.char}</span
+                    >
                 {/each}
             </h1>
             <p class="hero-subtitle">Video, block by block.</p>
             <p class="hero-desc">
-                Antimony is a block-based video editor. You build your edit by snapping blocks together,
-                the same idea as block-based programming, just applied to video.
+                Antimony is a block-based video editor. You build your edit by
+                snapping blocks together, the same idea as block-based
+                programming, just applied to video.
             </p>
             <div class="hero-actions">
-                <Button highlighted={true} link={LINK?.editor ?? '/editor'} label="Open the editor" />
+                <Button
+                    highlighted={true}
+                    link={LINK?.editor ?? "/editor"}
+                    label="Open the editor"
+                />
                 <Button link="/credits" label="See who built it" />
             </div>
         </div>
@@ -41,8 +47,9 @@
         <span class="eyebrow">Why Antimony</span>
         <h2>Editing video shouldn't require a manual</h2>
         <p class="section-lede">
-            A lot of video editors just expect you to already know where everything is: each menu, hotkey,
-            and part of the timeline. Antimony skips most of that.
+            A lot of video editors just expect you to already know where
+            everything is: each menu, hotkey, and part of the timeline. Antimony
+            skips most of that.
         </p>
 
         <div class="feature-grid">
@@ -50,8 +57,9 @@
                 <div class="panel-body">
                     <h3>Built for accessibility</h3>
                     <p>
-                        Every action in your edit is a block you can actually see.
-						Nothing is hidden from you inside three different menus.
+                        Every action in your edit is a block you can actually
+                        see. Nothing is hidden from you inside three different
+                        menus.
                     </p>
                 </div>
             </div>
@@ -60,8 +68,9 @@
                 <div class="panel-body">
                     <h3>Absolutely nothing to memorize</h3>
                     <p>
-                        Blocks only click where they're meant to. There's no need to remember syntax
-                        or the right order to do things. If it fits, it'll work.
+                        Blocks only click where they're meant to. There's no
+                        need to remember syntax or the right order to do things.
+                        If it fits, it'll work.
                     </p>
                 </div>
             </div>
@@ -70,8 +79,9 @@
                 <div class="panel-body">
                     <h3>An edit you can actually read</h3>
                     <p>
-                        Since the whole sequence is laid out as blocks, you can look at an edit and tell what
-                        it does. That helps whether it's your own project or one that you downloaded
+                        Since the whole sequence is laid out as blocks, you can
+                        look at an edit and tell what it does. That helps
+                        whether it's your own project or one that you downloaded
                         off somewhere.
                     </p>
                 </div>
@@ -81,9 +91,10 @@
                 <div class="panel-body">
                     <h3>Built 100% in the open</h3>
                     <p>
-                        Antimony is built by volunteers on GitHub instead of remaining solely behind closed doors.
-                        That keeps the project honest about what it can and can't do yet, and allows people
-						to freely contribute to it!
+                        Antimony is built by volunteers on GitHub instead of
+                        remaining solely behind closed doors. That keeps the
+                        project honest about what it can and can't do yet, and
+                        allows people to freely contribute to it!
                     </p>
                 </div>
             </div>
@@ -94,8 +105,14 @@
         <div class="panel cta-panel">
             <div class="panel-body cta-body">
                 <h2>Try making something cool!</h2>
-                <p>Antimony is <b>still in development</b> and may be prone to bugs.</p>
-                <Button highlighted={true} link={LINK.editor} label="Open the editor" />
+                <p>
+                    Antimony is <b>still in development</b> and may be prone to bugs.
+                </p>
+                <Button
+                    highlighted={true}
+                    link={LINK.editor}
+                    label="Open the editor"
+                />
             </div>
         </div>
     </section>
@@ -105,7 +122,11 @@
     .hero {
         border-bottom: 1px solid var(--border-default);
         background:
-            radial-gradient(ellipse 60% 50% at 50% 0%, var(--accent-dim), transparent),
+            radial-gradient(
+                ellipse 60% 50% at 50% 0%,
+                var(--accent-dim),
+                transparent
+            ),
             var(--bg-secondary);
         padding: var(--space-3xl) var(--space-xl);
     }
@@ -144,7 +165,8 @@
         transform: translateY(20px) scale(0.8);
         will-change: transform;
         animation:
-            char-in 0.6s var(--in-delay) cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+            char-in 0.6s var(--in-delay) cubic-bezier(0.34, 1.56, 0.64, 1)
+                forwards,
             char-float 3s ease-in-out infinite calc(-1 * var(--float-delay));
     }
 
@@ -156,8 +178,13 @@
     }
 
     @keyframes char-float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-5px); }
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-5px);
+        }
     }
 
     .hero-subtitle {
@@ -212,7 +239,11 @@
     }
 
     .feature-block-a {
-        background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+        background: linear-gradient(
+            135deg,
+            var(--accent) 0%,
+            var(--accent-hover) 100%
+        );
         box-shadow: 0 0 10px var(--accent-glow);
     }
 

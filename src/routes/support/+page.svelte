@@ -1,14 +1,19 @@
 <script>
-    import Navbar from '$lib/navbar.svelte';
-    import Button from '$lib/button.svelte';
+    import Navbar from "$lib/navbar.svelte";
+    import Button from "$lib/button.svelte";
 </script>
 
 <Navbar />
 
 <div class="support-container">
-    <small>This page is a work in progress. It may be incomplete or inaccurate.</small>
+    <small
+        >This page is a work in progress. It may be incomplete or inaccurate.</small
+    >
     <h1>Support Antimony</h1>
-    <p>Antimony costs money to maintain and improve. Your support helps us keep the project alive and growing!</p>
+    <p>
+        Antimony costs money to maintain and improve. Your support helps us keep
+        the project alive and growing!
+    </p>
 </div>
 
 <style>
@@ -18,4 +23,4 @@
         align-items: center;
         justify-content: center;
     }
-    </style>
+</style>
